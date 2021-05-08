@@ -1,16 +1,12 @@
-# WazirxBot
-An alert and price bot for india's crypto exchange wazirx.
+# Crypto Price Bot
+A Crypto alert and price bot in INR synced with WazirX.
 
 Deployed as bot here,
-https://t.me/wazirxin_bot
+https://t.me/CryptoKeralaMLBot
 
-The bot is developed and deployed in deta.sh
+The bot is developed and deployed in deta.sh, for quick and easy development and deployment explore deta.sh 
 
-So it wont compile locally, 
+## Credits, and Thanks to Beloved Developers ;
 
-in this line,
-from deta import App
-
-but it will work perfectly after deployment.
-
-For quick and easy development and deployment explore deta.sh 
+* [WazirXBot](https://github.com/99products/WazirxBot) - Original Repo
+* [Jinso Raj](https://github.com/jinsoraj) - For helping me 

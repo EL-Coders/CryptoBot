@@ -127,7 +127,7 @@ telegram_token=json.load(open('config.json','r'))['telegram_token']
 bot = telegram.Bot(token=telegram_token)
 
 TICKER_URL='https://api.wazirx.com/api/v2/tickers'
-HELP_TEXT="Usage: \n1.Message <token> to get its price\ne.g. wrxinr or btcinr\n\n"\
+HELP_TEXT="Hi, I 'm the official price bot @CryptoKeralaML synced with WazirX exchange.\n\nUsage: \n1.Message <token> to get its price\ne.g. wrxinr or btcinr\n\n"\
 "2.To set alert <token>@<price>\ne.g. wrxinr@220\n\n3.Show alerts /alerts\n\n"\
 "4.'inr' is default, so wrx or btc returns wrxinr or btcinr"
 
