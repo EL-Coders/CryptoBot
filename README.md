@@ -9,4 +9,5 @@ The bot is developed and deployed in deta.sh, for quick and easy development and
 ## Credits, and Thanks to Beloved Developers ;
 
 * [WazirXBot](https://github.com/99products/WazirxBot) - Original Repo
-* [Jinso Raj](https://github.com/jinsoraj) - For helping me 
+* [@SpEcHIDe](https://github.com/SpEcHIDe)
+* [@JinsoRaj](https://github.com/jinsoraj) 

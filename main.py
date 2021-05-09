@@ -24,7 +24,7 @@ async def process(request:Request):
     update = telegram.Update.de_json(request_data, bot)
     dispatcher.process_update(update)
     if update.message:
-        text=update.message.text.lower()
+        text=update and update.message and update.message.text and update.message.text.lower()
         if(text=='/alerts' or text=='alerts'):
             show_alerts(update)
         elif (text=='/start' or text=='start' or text=='/help' or text=='help'):
@@ -62,11 +62,13 @@ def alert_callback(update:Update,context:CallbackContext):
 
 
 def fetchAndCreateAlert(update):
-    text=update.message.text.lower().strip()
+    text=update and update.message and update.message.text and update.message.text.lower().strip()
     token=text
     price=''
-    if len(text.split('@'))==2:
-        token,price=text.split('@')
+    if not text:
+       return
+    if len(text and text.split('@'))==2:
+       token,price=text.split('@')
 
     if len(token)<5:
         token=token+'inr'
@@ -84,10 +86,11 @@ def fetchAndCreateAlert(update):
                 response= 'Alert set: '+token+(' greater than or equal 'if condition>0 else ' less than or equal ')+price+'\ncurrent value: '+response
             else:
                 response="Max 3 alerts. /alerts"
-
-    response= response if response else HELP_TEXT
-    bot.sendMessage(chat_id=update.message.chat.id, text=response)
-
+    if response:
+       response= response
+       bot.sendMessage(chat_id=update.message.chat.id, text=response)
+    else:
+        return
 
 
 def start(update):
